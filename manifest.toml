@@ -1,0 +1,21 @@
+# Do not manually edit this file, it is managed by Gleam.
+#
+# This file locks the dependency versions used, to make your build
+# deterministic and to prevent unexpected versions from being included
+# in your application.
+#
+# You should check this file into your source control repository.
+
+packages = [
+  { name = "gleam_stdlib", version = "1.0.3", build_tools = ["gleam"], requirements = [], otp_app = "gleam_stdlib", source = "hex", outer_checksum = "1F543AFBA5D33DA493E6087F4E4C4F20D899411343512686C98A8ABB2963CF22" },
+  { name = "gleam_yielder", version = "1.1.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleam_yielder", source = "hex", outer_checksum = "8E4E4ECFA7982859F430C57F549200C7749823C106759F4A19A78AEA6687717A" },
+  { name = "gleeunit", version = "1.11.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleeunit", source = "hex", outer_checksum = "EC31ABA74256AEA531EDF8169931D775BBB384FED0A8A1BDC4DD9354E3E21826" },
+  { name = "input", version = "1.0.1", build_tools = ["gleam"], requirements = [], otp_app = "input", source = "hex", outer_checksum = "FE84CDADC78A1367E4AFD561A529825A8FEC88D165CBDF511FD3226CABCDEE6F" },
+  { name = "iv", version = "1.4.4", build_tools = ["gleam"], requirements = ["gleam_stdlib", "gleam_yielder"], otp_app = "iv", source = "hex", outer_checksum = "938AEAA6FF30ECF1AA36CC766AC9EE5D4BD6F3C4EDECCE71D16F4FD14F36C41E" },
+]
+
+[requirements]
+gleam_stdlib = { version = ">= 1.0.0 and < 2.0.0" }
+gleeunit = { version = ">= 1.0.0 and < 2.0.0" }
+input = { version = ">= 1.0.1 and < 2.0.0" }
+iv = { version = ">= 1.4.4 and < 2.0.0" }
