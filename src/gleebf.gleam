@@ -73,7 +73,12 @@ fn do_execute(
         // decrement current cell (-)
         Decrement -> {
           let assert Ok(data) =
-            iv.update(memory.data, memory.pointer, fn(i) { { i - 1 } % 256 })
+            iv.update(memory.data, memory.pointer, fn(i) {
+              case { i - 1 } % 256 {
+                i if i < 0 -> i + 256
+                i -> i
+              }
+            })
           let memory = Memory(..memory, data:)
 
           do_execute(program, memory, acc)
